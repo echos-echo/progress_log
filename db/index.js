@@ -17,7 +17,7 @@ const Log = db.define('log', {
         allowNull: false
     },
     details: {
-        type: Sequelize.STRING
+        type: Sequelize.TEXT
     }
 })
 
