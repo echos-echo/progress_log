@@ -14,6 +14,7 @@ into your psql command line in order to <code>CREATE DATABASE progress</code></p
 <p>Now you can <code>npm start</code> to run it all!
 <h2>Using this Program</h2>
 <p>Currently, this code is set up to send data to your browser at <a href='http://localhost:3000'>http://localhost:3000</a>, but feel free to modify the code to suit any port number you wish</p>
+<p>There is also no styling; do not worry about the lack of styling. This is meant purely for JavaScript practice. I intentionally did not add any styles</p>
 <p>Once you open it up on your localhost, it will send you to a page that is empty save for one header; that is expected!<br>
 Follow the link at the top in order to go to the page where you may add a log<br>
 The purpose of this mini application is for you to select a mood (based on how you feel from the day's contents), what you felt like you learned, and any other details you'd like to include (notable things, what you ate for lunch, any distractions, etc)<br>
