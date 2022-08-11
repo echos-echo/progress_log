@@ -4,13 +4,9 @@ const {Log} = require('../db');
 // the view that formats our html, so we don't have to write it here!
 const addView = require('../views/addView');
 
+// handles the loading of the add page at localhost:3000/add
 addRouter.get('/', async (req, res, next) => {
     try {
-        // this statement should appear in your console when you load localhost:3000/add
-        console.log('this page is where you can add a daily log to your database');
-        // the html form that we want to appear in the user's page
-        // when they type in localhost:3000/
-
         // addView is a function that returns our formatted html
         // it takes no arguments because we are not trying to send variables to our page
         res.send(addView());
@@ -18,7 +14,6 @@ addRouter.get('/', async (req, res, next) => {
         next();
     }
 })
-
 
 // will fire this method when user click submit on the log form above ^
 addRouter.post('/', async (req, res, next) => {
@@ -39,9 +34,12 @@ addRouter.post('/', async (req, res, next) => {
         })
 
         // redirects to page localhost:3000/logs
-        res.redirect('../logs');
+        res.redirect('./logs');
     } catch (err) {
+        // nothing will show in the browser, but this will appear in your console
+        // if you did not fill out all the necessary fields
         console.log('Could not enter data: Please enter all necessary fields');
+        // and then redirects back to the add page so you can try again
         next(res.redirect('/'));
     }
 })

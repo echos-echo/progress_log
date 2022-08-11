@@ -1,7 +1,8 @@
-const logsRouter = require('express').Router();
 const html = require('html-template-tag');
-const {Log} = require('../db');
 
+// formatted html for our 'all logs' page
+// we don't need the Log model from db here because we already have our logs data passed in when the function is called
+// this data is retrieved before this function in logs.js
 module.exports = (logs) => html`
             <html>
                 <head>

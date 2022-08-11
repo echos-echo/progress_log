@@ -1,6 +1,6 @@
 const html = require('html-template-tag');
 
-// formatted html for our 'add a log' page
+// formatted html for our 'add a log' page, utilized by add.js
 // includes all fields, the submit button, and an additional link to which you can
 // go to the page that shows all our logs
 module.exports = () => html`

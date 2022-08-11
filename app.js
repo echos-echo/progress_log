@@ -22,7 +22,7 @@ db.authenticate().then(() => {
     console.log('connected to database');
 })
 
-// function to start up the app...
+// function to start up the app... and also connect to the database!!!
 const start = async () => {
     try {
         console.log('starting...');
@@ -40,6 +40,9 @@ const start = async () => {
     }
 }
 
+// !! FROM HERE ON, THESE ARE THE ROUTES FOR SPECIFIC PAGES !!
+// PLEASE REFER TO THE CODE/COMMENTS ON THE FILES CORRESPONDING TO THE ROUTER NAMES!!
+
 // the root page, but will redirect to another page...
 app.get('/', async (req, res, next) => {
     res.redirect('/logs');
@@ -52,5 +55,5 @@ app.use('/add', addRouter);
 app.use('/logs', logsRouter)
 
 
-// start our app!!
+// engines starting, start our app!!
 start();
